@@ -9,44 +9,43 @@
 
 </head>
 <body>
-<h1>Thêm HomeStay</h1>
+<h1>Sửa HomeStay</h1>
     <div class="container col-6">
         <form action="" method="post">
             <div class="mb-3">
-                <label for="name" class="form-label">Tên</label>
-                <input type="text" class="form-control" id="name" name="name">
-                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                {name}
+                <!-- <label for="name" class="form-label">Tên</label>
+                <input type="text" class="form-control" id="name" name="name"> -->
             </div>
             <div class="mb-3">
                 <label for="city" class="form-label">Thành Phố</label>
                 <select name="city" id="city">
-                    <option value="1" selected>Hà Nội</option>
+                    {city}
+                    <option value="1">Hà Nội</option>
                     <option value="2">HCM</option>
-                    <option value="3">phu quoc</option>
-                    <option value="4">vinh phuc</option>
-                    <option value="5">ninh binh</option>
-                    <option value="6">ca mau</option>
-
-
+                    <option value="3">Đà Nẵng</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="toilet" class="form-label">Số Phòng Vệ sinh</label>
-                <input type="number" class="form-control" id="toilet" name="toilet">
+                {bedrooms}
+                <!-- <label for="num_bedroom" class="form-label">Số Phòng Ngủ</label>
+                <input type="number" class="form-control" id="num_bedroom" name="num_bedroom"> -->
             </div>
             <div class="mb-3">
-                <label for="bedrooms" class="form-label">Số Phòng Ngủ</label>
-                <input type="number" class="form-control" id="bedrooms" name="bedrooms">
+                {toilet}
+                <!-- <label for="num_badroom" class="form-label">Số Phòng Vệ Sinh</label>
+                <input type="number" class="form-control" id="num_badroom" name="num_badroom"> -->
             </div>
             <div class="mb-3">
-                <label for="price" class="form-label">Giá</label>
-                <input type="number" class="form-control" id="price" name="price">
+                {price}
+                <!-- <label for="price" class="form-label">Giá</label>
+                <input type="number" class="form-control" id="price" name="price"> -->
             </div>
             <div class="mb-3">
                 <label for="describes" class="form-label">Mô tả</label>
-                <textarea cols="8" rows="6" class="form-control" id="describes" name="describes"></textarea>
+                <textarea cols="8" rows="6" class="form-control" id="describes" name="describes">{describes}</textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Thêm</button>
+            <button type="submit" class="btn btn-primary">Cập nhật</button>
             <button  class="btn btn-secondary"><a href="/" class="text-decoration-none" style="color: white;">Thoát</a></button>
         </form>
     </div>

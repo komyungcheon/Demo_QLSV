@@ -4,8 +4,8 @@ class DatabaseModel {
     constructor() {
         this.host = 'localhost';
         this.user = 'root';
-        this.password = '123456';
-        this.database = 'QuanLySinhVien';
+        this.password = '123';
+        this.database = 'homestay';
     }
 
     connect() {

@@ -1,10 +1,8 @@
 const http = require('http');
 const url = require('url');
 
-const studentController = require('./src/controller/student.controller');
+const HomestayController = require('./src/controller/homestay.controller');
 const GeneralController = require('./src/controller/general.controller');
-
-const PORT = 3000;
 
 const server = http.createServer((req, res) => {
     let pathUrl = url.parse(req.url).pathname;
@@ -13,10 +11,12 @@ const server = http.createServer((req, res) => {
 })
 
 router = {
-    '/display': studentController.getDisplayStudentPage,
-    '/detailStudent': studentController.getDetailPage,
-    '/add': studentController.addStudent
+    '/' : HomestayController.getDisplayHomestayPage,
+    '/display': HomestayController.getDetailHomestay,
+    '/add': HomestayController.addHomestay,
+    '/update': HomestayController.updateHomestay,
+    '/delete': HomestayController.deleteHomestay
 }
 
 
-server.listen(PORT, 'localhost', () => console.log(`Server is running at http://localhost:${PORT}`))
+server.listen(8080, 'localhost', () => console.log(`Server is running`))
