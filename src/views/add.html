@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Thêm học viên</h1>
+    <div class="content">
+        <form action="" id="myForm" method="post">
+            Tên: <input type="text" name="name" required>
+            Lớp: <select name="idClass">
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            Điểm lý thuyết: <input type="number" name="theo_point" required>
+            Điểm thực hành: <input type="number" name="prac_point" required>
+            Đánh giá: 
+                Đạt <input type="radio" name="assess" value="1" required>
+                Không Đạt <input type="radio" name="assess" value="0" required>
+            Mô tả <textarea name="descript" id="" cols="30" rows="10"></textarea>
+            <button type="submit">Lưu</button>
+            <button><a href="/display">Thoát</a></button>
+        </form>
+    </div>
+</body>
+
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("myForm").submit();
+    });
+</script>
+</html>
